@@ -44,7 +44,7 @@ async def steal_fish(self, event: AstrMessageEvent):
                 target_id = parts[1].strip()
 
     if not target_id:
-        yield event.plain_result("❌ 请指定要查看的用户！\n用法：/偷看鱼塘 @用户 或 /偷看鱼塘 用户ID")
+        yield event.plain_result("❌ 请指定要查看的用户！\n用法：/偷鱼 @用户 或 /偷鱼 用户ID")
         return
     if int(target_id) == int(user_id):
         yield event.plain_result("不能偷自己的鱼哦！")
